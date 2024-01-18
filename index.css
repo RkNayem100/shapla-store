@@ -8,6 +8,8 @@
 }
 
 body {
+ -webkit-user-select: none;
+    user-select: none;
 
   background: #333;
   justify-content: flex-end;
