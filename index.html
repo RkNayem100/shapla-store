@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="index.css">
+    <title>Shapla store</title>
+</head>
+<body>
+    <nav class="tools" style="font-family: times new roman;">
+        <div class="color" style="text-align: center;"><h2 class="wel">Welcome here</h2></div>
+       <a href="admindetails.html"><img src="/webimg/logo.jpg" alt="" class="logo"></a>
+        <ul style="font-family:Times New Roman;">
+            <li style="font-family: 'Times New Roman', Times, serif;">home</li>
+            <li style="font-family: 'Times New Roman', Times, serif;">contact</li>
+            <li style="font-family: 'Times New Roman', Times, serif;">about us </li>
+            <a href="#demo" style="text-decoration: none;position: relative; bottom: 1.3px; font-family:Times New Roman;" class="aa"onclick="typeWriter()" ><li  style="box-shadow: none;font-family: 'Times New Roman', Times, serif;">more</li></a>
+        </ul>
+        <img src="/webimg/dot.jpg" alt="3dot" class="dot" onclick="openit()">
+    </nav>
+   <div class="pnav">
+    <ul>
+        <li style="font-family: 'Times New Roman', Times, serif;">home</li>
+        <li style="font-family: 'Times New Roman', Times, serif;">contact</li>
+        <li style="font-family: 'Times New Roman', Times, serif;">about us </li>
+        <li style="font-family: 'Times New Roman', Times, serif;">reviews</li>
+    </ul></div>
+    <div class="tl">
+        <ul>
+            <a href="login.html" style="text-decoration: none; cursor: auto; color: black;"><li style="font-family: 'Times New Roman', Times, serif;">log in <li></a>
+            <li style="font-family: 'Times New Roman', Times, serif;">products</li>
+            <li style="font-family: 'Times New Roman', Times, serif;"><a href="https://shop.bkash.com/shapla-store01607243253/paymentlink" style="text-decoration: none;" class="payment"><div class="payment" style="font-family: 'Times New Roman', Times, serif;">payments method</div></a></li>
+            <li style="font-family: 'Times New Roman', Times, serif;">more</li>
+        </ul>
+    </div>
+    <div class="body" style="height: 100vh; ">
+    
+    <h1 style="color:rgb(8, 124, 233) ;text-align: center;font-family:Arial, Helvetica, sans-serif;" class="hh"> shapla store International</h1>
+    <br>
+   <!-- <div class="imgbody">
+    <img src="/webimg/shahariya.jpg" alt="" class="storeimg" style="width:110%;">
+    <img src="/webimg/store.jpg" alt="" class="storeimg">
+    <img src="/webimg/store2.jpg" alt="" class="storeimg">
+</div>-->
+    
+    
+    </div>
+    <footer class="footer">
+        <div class="waves">
+          <div class="wave" id="wave1"></div>
+          <div class="wave" id="wave2"></div>
+          <div class="wave" id="wave3"></div>
+          <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social-icon">
+          <li class="social-icon__item"><a class="social-icon__link" href="https://www.facebook.com/profile.php?id=61555469232231">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a></li>
+        </ul>
+        <ul class="menu">
+          <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+    
+        </ul>
+        <p>&copy;2023 Shapla store | All Rights Reserved</p>
+      </footer>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        let tl =document.querySelector(".tl");
+        function openit() {
+            
+            if (tl.style.height=="218px") {
+                tl.style.height="0px";
+                
+            } else {
+                tl.style.height="218px";
+            }
+        }
+    </script>
+</body>
+<style>
+    *{padding: 0;margin: 0;box-sizing: border-box;}
+    html{scroll-behavior: smooth;}
+    body{background-image: url(/webimg/bcck.jpg); background-repeat: no-repeat; background-size: cover;}
+   .payment{height: 100%;width: 100%; z-index: 800; color: black; cursor: auto;} 
+   .payment:hover{color: #fff;}
+    .wel{opacity: 0.1; color: dodgerblue; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;letter-spacing: 3px;
+     display: none; text-shadow: 1px 0px aqua; cursor: pointer;}
+     #iimg{height: 250px; margin-top: 25px; position: absolute; left: 25px; border-radius: 6px; box-shadow: 0px 2px 6px gray; display: none;}
+   .color:hover .wel{display: block;cursor:auto;}
+   .aa:hover{background-color: orange;color: #fff;box-shadow:  0px 0px 4px orange; border-radius: 5px; color: #fff;}
+   .aa{padding-left: 4.3%;padding-right: 4.3%; color: black; transition: 0.2s;}
+    .p2{font-size: 24px;}
+    .pspace{overflow: hidden; position: absolute; left: 350px; margin-top: 28px; width:300px; height: 250px; text-align: center; text-transform: capitalize;}
+   .storeimg{height: 100%;width: 100%;  position: relative;animation: left 6s linear infinite; transition: 2s;}
+   .imgbody{height: 31%; width: 98%; border: 1px solid green; margin-left: 20px; display:none; 
+     border-radius: 5px; overflow: hidden; position: relative;}
+   .storebio{font-size: 18px; text-shadow: 0px 0.5px #fff; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+    .body{padding-left: 8px;padding-top: 8px;}
+    .tools{background-color: #fff; width: 100%; height: 110px; padding-top: 0px; box-shadow: 0px 0px 18px gray;}
+    .tools ul li:hover{background-color: orange; border-radius: 5px; transition: 0.2s; color: #fff;
+    box-shadow:  0px 0px 4px orange;}
+    .tools ul {list-style-type: none;display: flex; margin-left: 106px; margin-top: 17px;}
+    .tools ul li{font-size: 22px; text-transform: uppercase; padding: 15px 4.3% 15px 4.3%; cursor: pointer;z-index: 800;}
+    .logo{height: 65px; margin-top: 9.2px; border-radius: 15px;margin-left: 14px; ;position: absolute;}
+    .dot{height: 40px; position: absolute; top: 48.5px; right: 25px; cursor: pointer;}
+    .color{height: 30px;width: 100%; background-color:goldenrod;}
+    /*.footer{width: 100%; height: 300px; background:rgb(243, 248, 247);padding-left: 150px;line-height: 2.3em;display: flex;}*/
+    .tl{font-size: 25px; width: 100%; height: 0px;background-color: #fff; line-height: 2em;
+    padding-left: 12px; padding-top: 4px; overflow: hidden; transition: 0.4s;text-transform: capitalize;}
+    .hh{animation:hey 1s linear infinite; text-shadow: 1px 1px green;}
+    .tl ul li:hover{background: orange; color: #fff;}
+    .tl ul{padding-left: 0px;list-style-type: none;}
+    .tl ul li{padding-left: 10px;}
+    h1{text-transform: uppercase; word-spacing: 5px;font-size: 65px;}
+    .pnav{font-size: 25px; width: 100%; height: 0px;background-color: #fff; line-height: 2em; outline: none;
+    padding-left: 12px; padding-top: 4px; overflow: hidden; transition: 0.4s;text-transform: capitalize;}
+    .pnav ul li:hover{background: orange; color: #fff;}
+    .pnav ul{padding-left: 0px;list-style-type: none;}
+    .pnav ul li{padding-left: 10px;}
+  
+    
+   @keyframes hey {
+    50% {display: block;}
+   }
+    @media only screen and (max-width:600px) {
+     .tools ul li{display: none;}
+     .pnav{font-size: 25px; width: 100%; height: 200px;background-color: #fff; line-height: 2em; outline: none;
+    padding-left: 12px; padding-top: 4px; overflow: hidden; transition: 0.4s;text-transform: capitalize;}
+    .pnav ul li:hover{background: orange; color: #fff;}
+    .pnav ul{padding-left: 0px;list-style-type: none;}
+    .pnav ul li{padding-left: 10px;}
+    .logo{text-align: center;position: static;}
+    .centerlogo{text-align: center;}
+    .hh{font-size: 16px;}
+.section bg-footer{font-size: 8px;}
+    }
+    @media only screen and (min-width:600px){
+        .tools ul li{font-size: 20px;}
+       
+        .centerlogo{height: 80px;width: 100%;position: absolute;top: 0; 
+        
+    }
+   
+    @media only screen and (min-width:744px){
+        .tools ul li{font-size: 20px;}
+    }
+@media only screen and (min-width:1000px){
+.newd{font-size: 14px;}
+}
+    @media only screen and (min-width:1200px){
+        .tools ul li{font-size: 22px; text-transform: uppercase; padding: 15px 4.3% 15px 4.3%; cursor: pointer;}
+    }
+</style>
+</html>
