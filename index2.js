@@ -30,7 +30,7 @@ const items=[
 id:"001",
 item_image:"sos.jpg",
 rating:{
-stars:"1.5",
+stars:"2.5",
 review:"1.6k",
 },
 company:"the exclusive",
