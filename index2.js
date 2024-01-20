@@ -43,7 +43,7 @@ discount:"42",
 id:"002",
 item_image:"lifeboy.jpg",
 rating:{
-stars:"2.1",
+stars:"2.4",
 review:"1.6k",
 },
 company:"exclusive",
