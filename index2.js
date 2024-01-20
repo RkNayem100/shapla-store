@@ -30,7 +30,7 @@ const items=[
 id:"001",
 item_image:"sos.jpg",
 rating:{
-stars:"4.5",
+stars:"1.5",
 review:"1.6k",
 },
 company:"the exclusive",
@@ -173,7 +173,7 @@ discount:"42",
 id:"12",
 item_image:"dairy milk.jpg",
 rating:{
-stars:"2.1",
+stars:"4.1",
 review:"4.6k",
 },
 company:"headphoneX",
