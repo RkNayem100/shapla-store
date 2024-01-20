@@ -407,7 +407,7 @@ innerHTML+=`
 <div class="company" >${item.company}</div>
 <div class="item-name" >${item.itemname}</div>
 <span class="current-prize" >টাকা ${item.current}₹</span> <br>
-<button class="bagbtn" onclick="bag(${item.id});">order it
+<button class="bagbtn" onclick="bag(${item.id});">order now
 </button>
 <audio src="click.mp3" id="click"></audio>
 </div>
