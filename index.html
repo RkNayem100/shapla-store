@@ -7,6 +7,7 @@
     <title>Shapla store</title>
 </head>
 <body>
+     <div id="preloader"></div>
     <nav class="tools" style="font-family: times new roman;">
         <div class="color" style="text-align: center;"><h2 class="wel">Welcome here</h2></div>
        <a href="admindetails.html"><img src="logo.jpg" alt="" class="logo"></a>
@@ -95,12 +96,27 @@
         }
     </script>
     <script src="index2.js"></script>
+    <script>
+      var loader = document.getElementById("preloader");
+      window.addEventListener("load",function(){
+        loader.style.display="none";
+      }) 
+
+    </script>
 </body>
 <style>
     *{padding: 0;margin: 0;box-sizing: border-box;}
     html{scroll-behavior: smooth;}
     body{background-image: url(shopbc.jpg); background-repeat: no-repeat; background-size: cover;  -webkit-user-select: none;
     user-select: none;
+}
+  #preloader{
+
+ background: #fff url(slogo.gif) no-repeat center center ;
+ height: 100vh; 
+ width: 100%;
+ position: fixed;
+ z-index: 99999;
 }
 .company{margin-top:5px;font-weight:700;text-transform:uppercase;margin-left: 5px;}
 .item-name{font-family:times;color:rgb(220, 230, 207);font-style:italic;margin-left: 5px;text-shadow: 0.5px 0px #fff;}
@@ -168,6 +184,13 @@ overflow:hidden;}
 .section bg-footer{font-size: 8px;}
         .tl ul li{font-size:14px;}
         .bagbtn{bottom:0px;}
+        #preloader{
+
+background: #fff url(slogo.gif) no-repeat center center ;
+background-size: 200px 200px;
+position: fixed;
+z-index: 99999;
+}
     }
     @media only screen and (min-width:600px)
         .tools ul li{font-size: 20px;}
