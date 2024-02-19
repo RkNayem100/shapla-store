@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Shapla store</title>
+    <link rel="stylesheet" href="safari.css">
+</head>
+<body>
+    <div class="mobile-block">
+        <i class="fa fa-close" id="closem" onclick="closeMobile()"></i>
+    </div>
+    <div class="bodylog">
+        <div class="body-log-sign">
+            <i class="fa fa-close" style="float: right;position: relative;top: 8.5px;right: 15px;" onclick="closelog()"></i>
+            <div class="log-sign">
+                <ul>
+                    <li onclick="logIn()" class="l">login
+                        
+                    </li>
+                    <li onclick="signUp()" class="s">signup</li>
+                </ul>
+                <div class="login">
+                    <form action="">
+                    <span style="font-family: sans-serif;font-size: 13px;color: gray;font-weight: 600;">Email</span>
+                    <i class="fa fa-user" style="position: relative;top: 36px;right: 20px;"></i>
+                    <br>
+                    <input type="email" name="" id="email"required style="height: 41px;" placeholder="Email">
+                    <br>
+                    <span style="font-family: sans-serif;font-size: 13px;color: gray;font-weight: 600;">Password</span>
+                    <i class="fa fa-key" style="position: relative;top: 36px;right: 43px;"></i>
+                    <br>
+                    <input type="password" name="" id="password"required style="height: 41px;"placeholder="*******">
+                    <br>
+                    <input type="submit" style="margin-top: 18px;padding: 14px;" id="submit" value="Log in to your account">
+                </form>
+                <a href="#" style="text-decoration: none;position: relative;top: 10px;">forget password</a>
+                </div>
+                <div class="Signups">
+                    <span style="font-family: sans-serif;font-size: 13px;color: gray;font-weight: 600;">Name</span>
+                    <i class="fa fa-user" style="position: relative;top: 36px;right: 23px;"></i>
+                    <br>
+                    <input type="text" name="user-name" id="name" style="height: 41px;"placeholder="Your name"><br>
+                    <span style="font-family: sans-serif;font-size: 13px;color: gray;font-weight: 600;">Email</span>
+                    
+                    <br>
+                    <input type="email" name="email" id="semail" style="height: 41px;" placeholder="Your email"><br>
+                    <span style="font-family: sans-serif;font-size: 13px;color: gray;font-weight: 600;" class="pdisplay">password</span>
+                    <i class="fa fa-key" style="position: relative;top: 36px;right: 50px;"></i>
+                    <input type="password" name="" id="spassword" style="height: 41px;" placeholder="******" class="spass"><br>
+                    <span style="font-family: sans-serif;font-size: 13px;color: gray;font-weight: 600;" class="ppdisplay">confirm password</span>
+                    
+                    <input type="password" name="" id="scpassword" style="height: 41px;" placeholder="******"><br>
+                    <input type="submit" style="border-radius: 0px;padding: 13px;position: relative;top: 10px;background-color:  #04176e;color: #fff;"
+                    value="Creat your account">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cart-box">
+        <div class="cart-box-inside">
+        <div class="itemscart"><p><b>My Cart</b></p><span id="cart-items">(0)cart-items</span></div>
+        <div class="bag"><img src="bag2.png" alt="cart-logo" id="cartimg">
+        </div>
+        <div class="cart-staus"><p class="empty-cart">your cart is empty!</p></div>
+        <br>
+        <div class="hr3"></div>
+        <i class="fa fa-close" id="close-icon" onclick="xx()"></i>
+        
+            <div class="get-cart-items"></div>
+            <footer class="empty">
+            <div class="emty"></div>
+        </footer>
+    </div>
+    </div>
+    <div class="block"></div>
+    <div id="preloader">
+        <img src="slogo.gif" alt="" class="loader">
+      </div>
+      <div class="bd">
+      <div class="topdl">
+        <div class="own">
+            <span class="regon">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" zoomAndPan="magnify" viewBox="0 0 30 30.000001" height="40" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 2.878906 5.769531 L 26.832031 5.769531 L 26.832031 23.1875 L 2.878906 23.1875 Z M 2.878906 5.769531 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#id1)"><path fill="rgb(0%, 41.569519%, 30.198669%)" d="M 26.820312 20.507812 C 26.820312 21.988281 25.632812 23.1875 24.164062 23.1875 L 5.550781 23.1875 C 4.082031 23.1875 2.890625 21.988281 2.890625 20.507812 L 2.890625 8.449219 C 2.890625 6.96875 4.082031 5.769531 5.550781 5.769531 L 24.164062 5.769531 C 25.632812 5.769531 26.820312 6.96875 26.820312 8.449219 Z M 26.820312 20.507812 " fill-opacity="1" fill-rule="nonzero"/></g><path fill="rgb(95.689392%, 16.468811%, 25.489807%)" d="M 18.179688 14.144531 C 18.179688 14.449219 18.152344 14.757812 18.089844 15.058594 C 18.03125 15.359375 17.941406 15.652344 17.824219 15.9375 C 17.710938 16.222656 17.566406 16.492188 17.394531 16.75 C 17.226562 17.003906 17.035156 17.242188 16.816406 17.460938 C 16.601562 17.675781 16.367188 17.871094 16.113281 18.042969 C 15.859375 18.214844 15.589844 18.359375 15.308594 18.476562 C 15.027344 18.59375 14.734375 18.683594 14.433594 18.742188 C 14.136719 18.804688 13.832031 18.832031 13.527344 18.832031 C 13.222656 18.832031 12.917969 18.804688 12.621094 18.742188 C 12.320312 18.683594 12.027344 18.59375 11.746094 18.476562 C 11.464844 18.359375 11.195312 18.214844 10.941406 18.042969 C 10.6875 17.871094 10.453125 17.675781 10.238281 17.460938 C 10.019531 17.242188 9.828125 17.003906 9.660156 16.75 C 9.488281 16.492188 9.34375 16.222656 9.226562 15.9375 C 9.113281 15.652344 9.023438 15.359375 8.964844 15.058594 C 8.902344 14.757812 8.875 14.449219 8.875 14.144531 C 8.875 13.835938 8.902344 13.53125 8.964844 13.226562 C 9.023438 12.925781 9.113281 12.632812 9.226562 12.347656 C 9.34375 12.0625 9.488281 11.792969 9.660156 11.539062 C 9.828125 11.28125 10.019531 11.042969 10.238281 10.828125 C 10.453125 10.609375 10.6875 10.414062 10.941406 10.242188 C 11.195312 10.074219 11.464844 9.929688 11.746094 9.808594 C 12.027344 9.691406 12.320312 9.601562 12.621094 9.542969 C 12.917969 9.484375 13.222656 9.453125 13.527344 9.453125 C 13.832031 9.453125 14.136719 9.484375 14.433594 9.542969 C 14.734375 9.601562 15.027344 9.691406 15.308594 9.808594 C 15.589844 9.929688 15.859375 10.074219 16.113281 10.242188 C 16.367188 10.414062 16.601562 10.609375 16.816406 10.828125 C 17.035156 11.042969 17.226562 11.28125 17.394531 11.539062 C 17.566406 11.792969 17.710938 12.0625 17.824219 12.347656 C 17.941406 12.632812 18.03125 12.925781 18.089844 13.226562 C 18.152344 13.53125 18.179688 13.835938 18.179688 14.144531 Z M 18.179688 14.144531 " fill-opacity="1" fill-rule="nonzero"/></svg>Bangladesh</span>
+            <span class="collect">Click&collect</span>
+            <div class="hr"></div>
+            <span class="owner">Shapla store Al shahariya</span>
+            </div>
+            
+      </div>
+      <hr>
+    <nav class="top" style="position: sticky;top: 0px;z-index: 9999;">
+     <img src="dotss.png" alt="" class="dots" onclick="openMobile()">
+
+<img src="safarilogo2.png" alt="logo" class="logo">
+<input type="search" class="search" placeholder="What are you looking for?" required ><button class="sbtn"><i class="fa fa-search" style="position: relative;right: 3px;bottom: 0.8px;"></i>Search</button>
+<div class="vlll"><span class="Login" onclick="logIns()"><img src="user.png" alt="profile logo" class="pimg" ><span class="nlog">Login/signup</span></span><div class="hr2"></div><span class="cart" onclick="Opencart()"><i class="fa fa-shopping-cart" id="cart-icon"></i><span class="nsign">My cart</span></span></div>
+    </nav>
+    <nav class="tools">
+        <div class="mobile-tools">
+         <div class="mobile-user">
+            <div class="mimg"><img src="user.png" alt="user-logo"></div><span style="margin-left: 10px;font-weight: 600;">Nice meeting you sir</span>
+         </div>
+        <div class="mobile-admin">
+          <span style="position:absolute;text-transform: capitalize;font-weight: 700;font-size: 17px;margin-top:10px;left: 10px;">help</span><br><br>
+          <ul style="display: flex;margin-top: 42px;height: 40px;">
+            <li style="padding: 12px 25px 5px 25px; border: 1px solid green;"><i class="fa fa-phone" style="position: relative;right: 4px;"></i>call us</li>
+            <li style="padding: 12px 25px 5px 25px;border: 1px solid green;"><i class="fa fa-envelope" style="position: relative;right: 5px;"></i>mail us</li>
+          </ul>
+          
+           <div class="mobile-web-ownername"><i class="fa-solid fa-shop"></i>Shapla store Al shahariya</div>
+
+        </div>
+        <br><br><br><br>
+
+
+
+
+
+        </div>
+        <ul>
+            <a href="#" class="homelink" style="text-decoration: none;position: relative;top: 1.5px;"><li style="padding: 17.3px 15px 17.3px 15px;" class="home">Home
+                
+            </li></a>
+            <div class="dlr" style="text-shadow: 0.6px 0px #fff;letter-spacing: 1px; text-align: center;">Deal</div><li class="dl" >Deal</li>
+            <li class="mobdeal"><span class="imgofffer"><img src="deal-icon.png" alt=""></span>deal</li>
+            <li class="offer-dl"><span class="imgofffer"><img src="safarifo.png" alt=""></span>offer
+                <div class="offer">
+                  <ul>
+                    <li><h2>Promotion</h2></li>
+                    <li>10 20 30 recharedge</li>
+                    <li>canacur Promotion</li>
+                    <li>10 20 30 promotion</li>
+                    <li>online exclusive</li>
+                    <li>iphone promotion</li>
+                  </ul>
+                </div>
+            </li>
+            <li class="Food-Bevareg"><span class="imgofffer"><img src="safarifo.png" alt=""></span>Food&Bevareg
+                <div class="offer">
+                    <ul>
+                      <li><h2>Promotion</h2></li>
+                      <li>10 20 30 recharedge</li>
+                      <li>canacur Promotion</li>
+                      <li>10 20 30 promotion</li>
+                      <li>online exclusive</li>
+                      <li>iphone promotion</li>
+                    </ul>
+                  </div>
+            </li>
+            <li class="Fresh-Food"><span class="imgofffer"><img src="safarif.png" alt=""></span>Fresh Food
+                <div class="offer">
+                    <ul>
+                      <li><h2 style="color: red;">সুন্দর অফার</h2></li>
+                      <li>চানাচুর</li>
+                      <li>বিস্কুট</li>
+                      <li>সেভেন আপ</li>
+                      <li>প্রান আপ</li>
+                      <li>কেক</li>
+                    </ul>
+                    <ul>
+                        <li><h2 style="color: rgb(0, 255, 191);">সুন্দর অফার</h2></li>
+                        <li>চানাচুর</li>
+                        <li>বিস্কুট</li>
+                        <li>সেভেন আপ</li>
+                        <li>প্রান আপ</li>
+                        <li>কেক</li>
+                      </ul>
+                      <ul>
+                        <li><h2 style="color: rgb(0, 102, 255);">সুন্দর অফার</h2></li>
+                        <li>চানাচুর</li>
+                        <li>বিস্কুট</li>
+                        <li>সেভেন আপ</li>
+                        <li>প্রান আপ</li>
+                        <li>কেক</li>
+                      </ul>
+                  </div>
+            </li>
+            <li class="Health-Beauticare"><span class="imgofffer"><img src="safarihe.png" alt=""></span>Health&Beauticare
+                <div class="offer">
+                    <ul>
+                      <li><h2>Promotion</h2></li>
+                      <li>10 20 30 recharedge</li>
+                      <li>canacur Promotion</li>
+                      <li>10 20 30 promotion</li>
+                      <li>online exclusive</li>
+                      <li>iphone promotion</li>
+                    </ul>
+                  </div>
+            </li>
+            <li class="Mobiles"><span class="imgofffer"><img src="safarimo.jpeg" alt=""></span>Mobiles
+                <div class="offer">
+                  <ul>
+                    <li><h2>Promotion</h2></li>
+                    <li>10 20 30 recharedge</li>
+                    <li>canacur Promotion</li>
+                    <li>10 20 30 promotion</li>
+                    <li>online exclusive</li>
+                    <li>iphone promotion</li>
+                  </ul>
+                </div>
+            </li>
+            <li class="Electronices"><span class="imgofffer"><img src="safarie.png" alt=""></span>Electronices
+                <div class="offer">
+                    <ul>
+                      <li><h2>Promotion</h2></li>
+                      <li>10 20 30 recharedge</li>
+                      <li>canacur Promotion</li>
+                      <li>10 20 30 promotion</li>
+                      <li>online exclusive</li>
+                      <li>iphone promotion</li>
+                    </ul>
+                  </div>
+            </li>
+            <li class="Home-living"><span class="imgofffer"><img src="safarihou.png" alt=""></span>Home living
+                <div class="offer">
+                    <ul>
+                      <li><h2>Promotion</h2></li>
+                      <li>10 20 30 recharedge</li>
+                      <li>canacur Promotion</li>
+                      <li>10 20 30 promotion</li>
+                      <li>online exclusive</li>
+                      <li>iphone promotion</li>
+                    </ul>
+                  </div>
+            </li>
+            <li><b style="position: relative;bottom: 5px;font-weight: 900;">...</b></li>
+        </ul>
+    </nav>
+    
+    <div class="imgslide">
+     <img src="safari1.jpeg" alt="" class="safari">
+     <img src="safari2.jpeg" alt="" class="safari">
+     <img src="safari3.jpeg" alt="" class="safari">
+     <img src="safari4.jpeg" alt="" class="safari">
+     <img src="safari5.jpeg" alt="" class="safari">
+    </div>
+    <div class="delivery">
+        <img src="safari6.jpeg" alt="" class="delimg">
+        <img src="safari7.jpeg" alt="" class="delimg" >
+        <img src="safari8.jpeg" alt="" class="delimg" >
+    </div>
+    <div class="topdll">
+        <h2 style="margin-left: 15px;font-family: sans-serif; font-weight: 450;letter-spacing: 0.5px;">Top catagory</h2>
+        <br><br>
+        <ul>
+            <li>
+                <div class="imgcc">
+                <div class="imgc">
+                <img src="safarif.png" alt="logo" class="topdl-img">
+            </div>
+                <p>Fresh food</p>
+            </div>
+            
+            </li>
+            <li>
+                <div class="imgcc">
+                <div class="imgc">
+                <img src="safarie.png" alt="logo" class="topdl-img">
+            </div>
+                <p>Electronics</p>
+            
+            </div>
+            </li>
+            <li>
+                <div class="imgcc">
+                <div class="imgc" style="position: relative;left: 15px;">
+                <img src="safarifo.png" alt="logo" class="topdl-img" >
+            </div>
+                <p>Food&behavier</p>
+            </div>
+            </li>
+            <li>
+                <div class="imgcc">
+                <div class="imgc"style="position: relative;left: 22px;">
+                <img src="safarihe.png" alt="logo" class="topdl-img">
+            </div>
+                <p>Health&beutycare</p>
+            </div>
+            </li>
+            <li>
+                <div class="imgcc">
+                <div class="imgc" style="position: relative;left: 2px;">
+                <img src="safariho.jpeg" alt="logo" class="topdl-img">
+            </div>
+                <p>home living</p>
+            </div>
+            </li>
+            <li>
+                <div class="imgcc">
+                <div class="imgc" style="position: relative;left: 1px;">
+                <img src="safarihou.png" alt="logo" class="topdl-img">
+            </div>
+                <p>Household</p>
+            </div>
+            </li>
+            <li>
+                <div class="imgcc">
+                <div class="imgc"style="position: relative;right: 5px;">
+                <img src="safariba.png" alt="logo" class="topdl-img">
+            </div>
+                <p>Babycare</p>
+            </div>
+            </li>
+            <li>
+                
+                <div class="imgcc">
+                <div class="imgc"style="position: relative;right: 8px;">
+                <img src="safarimo.jpeg" alt="logo" class="topdl-img">
+            </div>
+                <p>Mobiles</p>
+            </div>
+            </li>
+        </ul>
+    </div>
+    <div class="body">
+    <div class="items">
+        <div class="item">
+            <div class="item-img-container" style="width: 100%;height: 67%;"><img src="canacur.jpg" alt=""></div><br>
+            <span>this is a canacur packet</span>
+            <br>
+            <button>add to cart</button>
+        </div>
+        <div class="item">
+            <div class="item-img-container" style="width: 100%;height: 67%;"><img src="biscut.jpg" alt=""></div><br>
+            <span>this is a canacur packet</span>
+            <br>
+            <button>add to cart</button>
+        </div>
+        <div class="item">
+            <div class="item-img-container" style="width: 100%;height: 67%;"><img src="seven up can.jpg" alt=""></div><br>
+            <span>this is a canacur packet</span>
+            <br>
+            <button>add to cart</button>
+        </div>
+        <div class="item">
+            <div class="item-img-container" style="width: 100%;height: 67%;"><img src="chips.jpg" alt=""></div><br>
+            <span>this is a canacur packet</span>
+            <br>
+            <button>add to cart</button>
+        </div>
+    </div>
+    </div>
+    <div class="chat-gp">
+        <div class="gatis"></div>
+        <div class="gatis2"></div>
+        <div class="chat" onclick="openchat()">
+            <span><i class="fa fa-comments" style="font-size: 26px;position: relative;right: 2px;"></i></span>
+            <p style="margin-left: 13.3px;font-weight: 600;font-family: sans-serif;">chat online</p>
+        </div>
+    </div>
+    <div class="chat-box">
+        <div class="closechat" onclick="closechat()">
+            <i class="fa fa-angle-down"></i>
+        </div>
+        <div class="conversiton">
+            <img src="msgicon.jpg" alt="msg icon">
+            <p style="margin-left: 18px;">conversition(<span id="conversiton-num" style="font-weight: 300;text-transform: lowercase;">s</span>)</p>
+        </div>
+        <div class="form">
+            <form action="https://api.web3forms.com/submit" method="POST">
+
+                <input type="hidden" name="access_key" value="2b904319-14d3-42f4-ba05-5ae7a7c89067">
+            
+                <input type="text" name="name" required placeholder="Enter your name" style="text-transform: capitalize;">
+                <input type="email" name="email" required placeholder="Enter your email address">
+                <textarea name="message" required placeholder="type your message and click sent"></textarea><br>
+                <button type="submit">sent</button>
+            
+            </form>
+        </div>
+    </div>
+    
+    <br>
+    <div class="ifarme" style="display: none;">
+    
+</div>
+<br>
+<hr>
+<footer class="footer">
+    <br>
+<div class="vll">
+    <ul style="line-height: 1.1em;">
+        <li><img src="safarilogo2.png" alt="logo" class="fimg"></li>
+        <li style="color: black;">+88018 11 384 384</li>
+        <li style="color: black;">  b71mar@gmail.com</li>
+        
+    </ul>
+</div>
+<div class="vll">
+   
+    <ul>
+        <li style="color: black;font-size: 9px;"> <h1>CATEGORIES</h1></li>
+        <br>
+        <li>Offer</li>
+        <li>Food & Beverages</li>
+        <li>Fresh Food</li>
+        <li>Health & Beauty Care</li>
+        <li>Mobiles</li>
+        <li>Electronics</li>
+        <li>Home Living</li>
+        <li>Household</li>
+        <li>Baby Care</li>
+        <li>Pets Care</li>
+    </ul>
+</div>
+<div class="vll">
+    
+    <ul>
+        <li style="color: black;font-size: 9px;"><h1>ABOUT US</h1></li>
+        <br>
+        <li>About Us</li>
+        <li>Privacy Policy</li>
+        <li>Terms and condition</li>
+        <li>Bulk Order</li>
+    </ul>
+</div>
+<div class="vll">
+   
+    <ul>
+        <li style="color: black;font-size: 9px;"> <h1>DOWNLOAD APP</h1></li>
+        <br>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<div class="tabfooter">
+    <ul>
+
+    <li><img src="safarilogo2.png" alt="logo" class="fimg"></li>
+        <li style="color: black;">+88018 11 384 384</li>
+        <li style="color: black;">  b71mar@gmail.com</li>
+        <li style="color: black;font-size: 9px;"> <h1>CATEGORIES</h1></li>
+        <br>
+        <li>Offer</li>
+        <li>Food & Beverages</li>
+        <li>Fresh Food</li>
+        <li>Health & Beauty Care</li>
+        <li>Mobiles</li>
+        <li>Electronics</li>
+        <li>Home Living</li>
+        <li>Household</li>
+        <li>Baby Care</li>
+        <li>Pets Care</li>
+    </ul>
+    <ul style="position: relative;top: 144px;">
+        <li style="color: black;font-size: 9px;"><h1>ABOUT US</h1></li>
+        <br>
+        <li>About Us</li>
+        <li>Privacy Policy</li>
+        <li>Terms and condition</li>
+        <li>Bulk Order</li>
+    </ul>
+</div>
+<div class="mfooter">
+    
+    <ul style="height: 30%;width: 100%;" class="mlogo">
+        <li class="mflogo">
+            <div style="width: 100%;display: flex;align-items: center;"><img src="safarilogo2.png" alt="" class="" style="position: relative;left: 20px;"></div>
+            <h2 style="font-family: sans-serif;">we are always here to help</h2>
+        </li>
+        
+    </ul>
+    <ul>
+        <div class="mmdev">
+        <li>
+            <div class="mpno">
+                <img src="picon.png" alt="phone icon"> <span><sup style="position: relative;bottom: 20px; left: 55px;font-size: 15px;text-transform: uppercase; font-family: sans-serif;opacity: 0.7;">phone</sup><b><pre style="display: inline;">+88018 8805 2298</pre></b></span>
+            </div>
+        </li>
+        <br>
+        <div class="hrr" style="width: 100%;height: 5px;display: flex;justify-content: center;"><hr style="width: 94%;"></div>
+    </ul>
+    <ul>
+        <li>
+            <div class="mpno">
+                <img src="emmicon.jpeg" alt="phone icon" style="transform: rotate(0deg); margin-top: 12px;"> <span class="emailm"><sup style="position: relative;bottom: 20px; left: 94px;font-size: 12px;text-transform: uppercase; font-family: sans-serif;opacity: 0.7;display: inline-block;">email support</sup><b><pre style="display: inline-block;" class="memail">www.myself4560@gmail.com</pre></b></span>
+            </div>
+        </li>
+        <br>
+        <div class="minformation">
+        <ul class="information">
+            
+            <li><h3 style="text-transform: uppercase; color: black;">information</h3></li>
+            <li>about us </li>
+            <li>privacy Policy</li>
+            <li>Terms and condition</li>
+            <li>Bulk Order</li>
+            <li class="mdownload">
+                <h3>DOWNLOAD APP</h3>
+                <img src="google.png" alt="" style="margin-left: -5px;"><img src="apple.png" alt="">
+            </li><br>
+            <li>
+                <h3>get in touch</h3>
+                <div class="micons"><a href="https://www.facebook.com/profile.php?id=61555469232231"><img src="fb.png" alt=""></a><a href="#"><img src="insta.png" alt=""></a><a href="#"><img src="what.png" alt=""></a></div>
+            </li>
+        
+        </ul>
+    </div>
+    </div>
+    </ul>
+   
+</div>
+</footer>
+</div>
+<hr>
+<div class="creatby">
+<br><br>
+<p class="creatby">© Copyright 2022-2023  <span style="color: rgb(238, 10, 10);margin-left: 5px;text-shadow: 0.1px 0.1px red;"> <b><a href="https://www.facebook.com/mdnoune.khan.75" style="text-decoration: none;color: red;">RK Group</a></b></span>. All Rights Reserved </p>
+<br><br>
+</div>
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load",function(){
+          loader.style.display="none";
+        }) ;
+        let cartimg=document.querySelector("#cartimg");
+      function Opencart(){
+        let bag = document.querySelector(".cart-box");
+        let block=document.querySelector(".block");
+        let bd =document.querySelector(".bd");
+        bag.style.right="-9px";
+       if(bag.style.right=="-9px"){
+        block.style.visibility="visible";
+        bd.style.position="fixed";
+       }
+       
+       
+       
+       
+      }
+      function xx(){
+        let bag = document.querySelector(".cart-box");
+        let block=document.querySelector(".block");
+        let bd =document.querySelector(".bd");
+        bag.style.right="-590px";
+        block.style.visibility="hidden";
+        bd.style.position="relative";
+        
+      }
+      let login = document.querySelector(".login");
+      let signup=document.querySelector(".Signups");
+      let s=document.querySelector(".s");
+      let l=document.querySelector(".l");
+      function signUp(){
+      login.style.right="420px";
+      login.style.transition="0.6s";
+      signup.style.left="0px";
+      s.style.borderBottom="2px solid gray";
+      l.style.borderBottom="2px solid #fff";
+      }
+      function logIn(){
+        login.style.right="0px";
+        signup.style.left="430px";
+        l.style.borderBottom="2px solid gray";
+        s.style.borderBottom="2px solid #fff";
+      }
+      let bodylogin=document.querySelector(".body-log-sign");
+      let bodylog=document.querySelector(".bodylog");
+      function logIns(){
+        bodylogin.style.bottom="0px";
+        login.style.display="block";
+        signup.style.display="block";
+        bodylog.style.visibility="visible";
+        bodylogin.style.visibility="visible";
+      }
+      function closelog(){
+        bodylogin.style.bottom="530px";
+        login.style.display="none";
+        signup.style.display="none";
+        bodylog.style.visibility="hidden";
+        bodylogin.style.visibility="hidden";
+      }
+      let chat = document.querySelector(".chat-box");
+      let chatgp=document.querySelector(".chat-gp");
+      function openchat(){
+      chat.style.top="173px";
+      chat.style.visibility="visible";
+      chatgp.style.display="none";
+      }
+      function closechat(){
+        chat.style.top="1223px";
+        chatgp.style.display="block";
+        if(chat.style.top=="223px"){
+        chat.style.visibility="hidden";
+        }
+        else{
+            chat.style.visibility="visible";
+        }
+      }
+      let tool=document.querySelector(".tools");
+      let mblock=document.querySelector(".mobile-block");
+      function openMobile(){
+       tool.style.left="0px";
+       //tool.style.visibility="visible";
+       mblock.style.display="block";
+      }
+      function closeMobile(){
+       tool.style.left="-300px";
+       //tool.style.visibility="visible";
+       mblock.style.display="none";
+      }
+      </script>
+</body>
+</html>
