@@ -1661,6 +1661,15 @@ svg {
 }
 
 @media only screen and (min-width:600px) {
+    .loader {
+        height: 300px;
+        width: 300px;
+        position: relative;
+        left: 10px;
+        bottom: 40px;
+        border-radius: 200%;
+        opacity: 0.8;
+      }
     .body-log-sign {
         width: 445px;
         height: 60%;
