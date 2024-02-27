@@ -307,6 +307,8 @@ svg {
     height: 200px;
     margin-top: 50px;
     padding-top: 15px;
+    overflow:visible; 
+    white-space:nowrap;
 }
 
 .topdll ul {
