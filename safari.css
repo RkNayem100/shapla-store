@@ -1285,6 +1285,11 @@ svg {
         display: block;
         list-style-type: none;
     }
+        .top {
+        position:fixed;
+         top:0px;
+         z-index:9999999;
+        }
 
 }
 
@@ -1330,11 +1335,16 @@ svg {
     .Signups input {
         width: 70%;
     }
+        .top {
+        position:fixed;
+         top:0px;
+         z-index:9999999;
+        }
 
 }
 
 @media only screen and (min-width:360px) {
-    .top{
+    .top {
         position:fixed;
          top:0px;
          z-index:9999999;
@@ -1484,6 +1494,8 @@ svg {
         height: 200px;
         margin-top: 90%;
         padding-top: 15px;
+        overflow:visible; 
+        white-space:nowrap;
     }
 
     .topdll ul li {
@@ -1557,6 +1569,11 @@ svg {
 }
 
 @media only screen and (min-width:560px) {
+        .top {
+        position:fixed;
+         top:0px;
+         z-index:9999999;
+        }
     .loader {
         height: 300px;
         width: 300px;
@@ -1764,8 +1781,13 @@ svg {
     .fimg {
         width: 200px;
     }
+        .top {
+        position:fixed;
+         top:0px;
+         z-index:9999999;
+        }
 
-}
+}    
 
 @media only screen and (min-width:748px) {
     .loader {
