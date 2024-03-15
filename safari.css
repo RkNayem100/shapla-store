@@ -1031,6 +1031,14 @@ svg {
 }
 
 @media only screen and (max-width:1000px) {
+    
+    .top{
+    position: fixed;
+    top: 0px;
+}
+.imgslide{
+    margin-top: 115px;
+}
     .vlll {
         left: 50px;
         bottom: 4px;
